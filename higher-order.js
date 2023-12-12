@@ -20,3 +20,22 @@ const toThePower = (num, pow) => {
 };
 
 console.log(toThePower(3, 3));
+
+
+const repeatFn = (num, callback) => {
+  
+  for (let i = 0; i < num; i++) {
+    callback(i)
+  }
+
+};
+
+const doubleNumber = (num) => {
+  console.log(num * 2)
+}
+
+repeatFn(5, (param) => {
+  console.log(param)
+});
+
+repeatFn(5, doubleNumber)
