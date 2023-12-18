@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>File downloader made in javascript</title>
+    <link rel="stylesheet" href="final_validation.css" />
+  </head>
+  <body>
+    <div>
+      <header>
+        <h1>File Downloader</h1>
+        <p>This page allows you to download a file if you so choose.</p>
+      </header>
+      <form action="#" name ="myForm" id ="urlForm">
+
+        <div>
+          <label for="DownloadYesNo">Do you want to download something?</label>
+          <select id="YesNo">
+            <option value="choose" selected="selected" disabled>Choose One</option>
+            <option value="YesOp">Yes</option>
+            <option value="NoOp">No</option>
+          </select>
+        </div>
+
+        <div class="inputUrl hidden">
+          <p>You're ready to download! Please place your url in this box and click the download button.</p>
+          <input type="url" name="url" placeholder="Paste file url" pattern ="^http:\/\/[a-zA-Z0-9_\-]+\.[a-zA-Z0-9_\-]+\.[a-zA-Z0-9_\-]+$" class="form-control validate-input" id="url" required>
+          <button type="submit" id="submitBtn">Download File </button>
+          <button type="reset" id="resetBtn">Reset </button>
+        </div>
+        
+        <div>
+          <img id="image">
+          <p id="blurb"></p>
+        </div>
+
+      </form>
+    </div>
+
+    <script src="final.js"></script>
+  </body>
+</html>
